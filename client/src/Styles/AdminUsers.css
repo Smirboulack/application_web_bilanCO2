@@ -1,0 +1,95 @@
+.AdminViewUsersMainBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.UsersInfoBar {
+    border: 1px solid black;
+    width: 50%;
+    background-color: #FFF5E0;
+    margin-bottom: 20px;
+}
+
+.UsersInfoBar-Row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 150px;
+}
+
+.UserLists {
+    border: 1px solid black;
+    width: 50%;
+    background-color: #FFF5E0;
+}
+
+.UserLists-Row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.UserLists-Row:hover {
+    background-color: #fce9c0;
+}
+
+.UserLists-Row-Tools {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.deleteButtonAdmin:hover {
+    cursor: pointer;
+}
+
+.editButtonAdmin:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .UsersInfoBar {
+        display: none;
+    }
+
+    .UsersInfoBar-Row {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 10px;
+    }
+
+    .UserLists {
+        width: 100%;
+    }
+
+    .UserLists-Row {
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column;
+    }
+
+    .UserLists-Row-Tools {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .deleteButtonAdmin {
+        font-size: 10px;
+    }
+
+    .editButtonAdmin {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,91 @@
+.TransportResultBilan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    background-color: #9ae3d5;
+    border-radius: 10px;
+    padding: 10px;
+    width: 60%;
+}
+
+.NumeriqueResultBilan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    background-color: #fff4e0;
+    border-radius: 10px;
+    padding: 10px;
+    width: 60%;
+}
+
+.AlimentationResultBilan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid black;
+    background-color: #e4c1f9;
+    border-radius: 10px;
+    padding: 10px;
+    width: 60%;
+}
+
+.TransportResultBilan:hover {
+    cursor: pointer;
+}
+
+.NumeriqueResultBilan:hover {
+    cursor: pointer;
+}
+
+.AlimentationResultBilan:hover {
+    cursor: pointer;
+}
+
+.ResultBilanTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.saveordropBilanBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.dropBilanbutton {
+    width: 150px;
+    height: 50px;
+    background: #ee4b0b;
+    border-radius: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+
+.saveBilanbutton {
+    width: 150px;
+    height: 50px;
+    background: #308474;
+    border-radius: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}

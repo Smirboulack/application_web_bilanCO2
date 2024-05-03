@@ -1,0 +1,36 @@
+{
+  "name": "eco-plus-server",
+  "version": "1.0.0",
+  "description": "Eco+ server",
+  "main": "server.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test jest --testTimeout=5000",
+    "prestart": "npx eslint --fix . --ext .js",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/config/"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pg-promise": "10.15.4"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin-js": "^1.7.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

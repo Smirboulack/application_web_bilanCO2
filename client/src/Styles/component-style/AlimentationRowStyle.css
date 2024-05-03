@@ -1,0 +1,91 @@
+.AlimentationRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.selectAlimentation {
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding-left: 20px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: black;
+    margin-left: 20px;
+}
+
+.type_Alimentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 700;
+    gap: 0px;
+
+}
+
+.aliment_column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.btndeleteAlimentation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .AlimentationRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .selectAlimentation {
+        width: 200px;
+        height: 40px;
+        border-radius: 30px;
+        border: 1px solid black;
+        padding-left: 20px;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        color: black;
+    }
+
+    .type_Alimentation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        font-size: 20px;
+        font-weight: 700;
+        gap: 0px;
+
+    }
+
+    .inputtempsutilisation {
+        height: 40px;
+        width: 150px;
+        border-radius: 15px;
+        border: 0.5px solid #000000;
+        text-align: center;
+    }
+}

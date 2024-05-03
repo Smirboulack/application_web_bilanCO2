@@ -1,0 +1,79 @@
+.row_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.type_transport {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 700;
+    gap: 0px;
+
+}
+
+.white_box {
+    background-color: #ffffff;
+    height: auto;
+    width: 750px;
+    border-radius: 30px;
+    border: 1px solid #000000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-weight: bold;
+}
+
+
+.white_box_titles {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.white_box_journey_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.inputdistance {
+    height: 49px;
+    width: 150px;
+    border-radius: 15px;
+    border: 0.5px solid #000000;
+    text-align: center;
+}
+
+.inputfrequence {
+    height: 49px;
+    width: 55px;
+    border-radius: 15px;
+    border: 0.5px solid #000000;
+    text-align: center;
+}
+
+.inputperiode {
+    height: 49px;
+    width: 154px;
+    border-radius: 15px;
+    border: 0.5px solid #000000;
+}
+
+
+.inputpassager {
+    height: 49px;
+    width: 55px;
+    border-radius: 15px;
+    border: 0.5px solid #000000;
+    text-align: center;
+}

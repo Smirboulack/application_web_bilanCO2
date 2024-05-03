@@ -1,0 +1,134 @@
+nav {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+div nav {
+    background-color: #FFF5E0;
+    width: 100%;
+}
+
+.navlink:hover {
+    background-color: #FF99C8;
+    border-radius: 50px;
+    border-width: 1px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+nav img {
+    width: 70px;
+    height: 70px;
+}
+
+nav #logoutButton {
+    background-color: #FF99C8;
+    border-radius: 50px;
+    font-size: 12px;
+    padding: 5px;
+}
+
+nav #logoutButton:hover {
+    background-color: #ff0000;
+    border-radius: 50px;
+    font-size: 12px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+/****************************************/
+/* Nav en étant connecté*/
+
+#ConnectNavBar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#ConnectNavBar div {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ConnectNavBar div a {
+    text-decoration: none;
+    color: #282c34;
+    font-size: 15px;
+}
+
+
+/* Nav sans être connecté*/
+
+#noConnectNavBar {
+    background-color: #FFF5E0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#noConnectNavBar div {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#noConnectNavBar div a {
+    text-decoration: none;
+    color: #282c34;
+    font-size: 15px;
+}
+
+#profileAndButton {
+    display: flex;
+    align-items: center;
+}
+
+#LogoHomeAndNav {
+    display: flex;
+    align-items: center;
+}
+
+#LogoApp {
+    transition: transform 0.3s ease-in-out;
+}
+
+#LogoApp:hover {
+    transform: scale(1.1);
+}
+
+.avatar_image_nav {
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.avatar_image_nav:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.Register_ConnectBtn {
+    margin: 10px;
+    font-size: 15px;
+    background-color: #9AE3D5;
+    border-radius: 50px;
+    border-color: black;
+    border-width: 1px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.Register_ConnectBtn:hover {
+    background-color: #37e7c4;
+    cursor: pointer;
+}

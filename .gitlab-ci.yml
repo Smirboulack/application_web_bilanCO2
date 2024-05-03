@@ -1,0 +1,60 @@
+# Build du front et du back séparément
+
+stages: 
+  - deploy_app
+  - sonarqube-check
+  - sonarqube-vulnerability-report
+
+front :
+  stage: deploy_app
+  image: node:latest
+  only:
+    - main
+  before_script:  
+  - chmod 400 $CI_SSH_KEY
+  script:
+    - cd client
+    - echo "REACT_APP_SERVER_URL=$REACT_APP_SERVER_URL_PROD" > .env
+    - npm install
+    - npm run build
+    - scp -o StrictHostKeyChecking=no -i $CI_SSH_KEY -r /builds/mif10_grp3/eco_plus/client/build gitlabci@192.168.75.49:/usr/share/nginx/eco+/
+
+back:
+  stage: deploy_app
+  image: node:20.12.1
+  only:
+    - main
+  before_script:  
+    - node -v
+    - chmod 400 $CI_SSH_KEY
+  script:
+    - cd backend
+    - npm install
+    - npm run prestart
+    - scp -o StrictHostKeyChecking=no -i $CI_SSH_KEY -r /builds/mif10_grp3/eco_plus/backend gitlabci@192.168.75.49:/usr/share/nginx/eco+/
+    - ssh -o StrictHostKeyChecking=no -i $CI_SSH_KEY gitlabci@192.168.75.49 'cd /usr/share/nginx/eco+/backend && npm install && pm2 restart server.js'
+
+sonarqube-check:
+  stage: sonarqube-check
+  image: 
+    name: sonarsource/sonar-scanner-cli:5.0
+    entrypoint: [""]
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
+    GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
+    SONAR_HOST_URL: $SONARQUBE_URL
+    SONAR_TOKEN: $SONARQUBE_KEY
+  cache:
+    key: "${CI_JOB_NAME}"
+    paths:
+      - .sonar/cache
+  script: 
+    - echo let some time before SonarQube to fix chronological problem
+    - sleep 120
+    - sonar-scanner
+  allow_failure: true
+  only:
+    - merge_requests
+    - master
+    - main
+    - develop
